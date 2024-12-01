@@ -4,6 +4,7 @@ const modalSubtitle = document.querySelector(".modal-subtitle");
 const descriptionContainer = document.querySelector(".project-description")
 const imageContainer = document.querySelector(".image-container");
 const dialog = document.querySelector("#favDialog");
+const fullPage = document.querySelector("#fullpage");
 
 const fileNames = {
     "cyprusinno": ["App/edit_profile.png", "App/forgot_password.png", "App/login_screen.png", "App/message.png", "App/messages.png", "App/profile.png", "App/users.png", "Website/create_event_screen.png", "Website/create_user_screen.png", "Website/events_screen.png", "Website/homepage.png", "Website/login_screen.png", "Website/notification_screen.png", "Website/users_screen.png"],
@@ -61,10 +62,13 @@ projectCards.forEach(card => {
             img.alt = imagePath;
             img.style.width = "100%";
             img.style.height = "100%";
-
+            img.addEventListener("click", function () {
+                fullPage.style.backgroundImage = "url(" + img.src + ")";
+                fullPage.style.display = "block";
+                dialog.close();
+            });
             imageContainer.appendChild(img);
         });
-
 
         dialog.showModal();
     });
@@ -86,4 +90,10 @@ dialog.addEventListener("click", (event) => {
 const closeModalButton = document.querySelector(".close-modal");
 closeModalButton.addEventListener("click", () => {
     dialog.close();
+})
+
+fullPage.addEventListener("click", () => {
+    console.log("fullpage")
+    fullPage.style.display = "none";
+    dialog.showModal();
 })
