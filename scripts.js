@@ -93,7 +93,15 @@ closeModalButton.addEventListener("click", () => {
 })
 
 fullPage.addEventListener("click", () => {
-    console.log("fullpage")
     fullPage.style.display = "none";
     dialog.showModal();
 })
+
+document.addEventListener("keydown", function (event) {
+    const key = event.key;
+    if (key === "Escape" && fullPage.style.display != "none") {
+        event.preventDefault();
+        fullPage.style.display = "none";
+        dialog.showModal();
+    }
+});
