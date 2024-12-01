@@ -21,6 +21,11 @@ body {
     font-size: 1.1em;
 }
 
+img {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
 .profile-photo {
     height: 200px;
     width: 200px;
@@ -90,7 +95,10 @@ svg {
     font-size: 1.2em;
     font-weight: bold;
     color: var(--secondary-color);
-    margin-bottom: 10px;
+}
+
+.description {
+    margin-top: 10px;
 }
 
 .projects-container>.title {
@@ -105,7 +113,49 @@ svg {
 }
 
 .projects>.card {
-    height: 250px;
     box-shadow: 0 10px 5px -5px gray;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon {
+    align-self: flex-end;
+}
+
+:modal {
+    background-color: var(--card-color);
+    border: 0px;
+    border-radius: 10px;
+    margin: auto;
+    height: 90vh;
+    width: 90vw;
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-titles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-container {
+    display: grid;
+    grid-template: 1fr / repeat(auto-fit, minmax(40%, 1fr));
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.project-description {
+    margin-top: 10px;
+}
+
+li {
+    list-style-position: inside;
 }
