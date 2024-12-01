@@ -40,6 +40,36 @@ const descriptions = {
     "trok": ["Built a mobile application using Flutter, enabling users to list items for bartering, make offers, and arrange meetings for item exchanges.", "Architected and developed the backend of a bartering application, creating RESTful APIs with Laravel."]
 }
 
+const technologies = {
+    "cyprusinno": [
+        "Laravel",
+        "Flutter",
+        "Bootstrap"
+    ],
+    "eragps": [
+        "Flutter",
+    ],
+    "gatsot": [
+        "Laravel",
+        "Flutter"
+    ],
+    "gurada": [
+        "Laravel",
+        "React"
+    ],
+    "gymlog": [
+        "React Native",
+    ],
+    "mesmer": [
+        "Laravel",
+        "Bootstrap"
+    ],
+    "trok": [
+        "Laravel",
+        "Bootstrap"
+    ],
+}
+
 let clickedImage
 projectCards.forEach(card => {
     card.addEventListener("click", (e) => {

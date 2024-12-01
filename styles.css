@@ -120,6 +120,16 @@ svg {
     justify-content: space-between;
 }
 
+.card-bottom {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.techs {
+    display: flex;
+}
+
 .icon {
     align-self: flex-end;
 }
@@ -167,7 +177,6 @@ li {
     list-style-position: inside;
 }
 
-
 #fullpage {
     display: none;
     position: absolute;
@@ -204,4 +213,34 @@ li {
     fill: var(--secondary-color);
     font-size: 2em;
     margin-left: 10px;
+}
+
+li span {
+    position: relative;
+    left: -20px;
+    top: -3px;
+}
+
+li::marker {
+    font-size: 30px;
+}
+
+li.laravel::marker {
+    color: red;
+}
+
+li.flutter::marker {
+    color: blue;
+}
+
+li.bootstrap::marker {
+    color: purple;
+}
+
+li.react::marker {
+    color: skyblue;
+}
+
+li.react-native::marker {
+    color: salmon;
 }
