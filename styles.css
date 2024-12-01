@@ -180,4 +180,28 @@ li {
     background-repeat: no-repeat no-repeat;
     background-position: center center;
     background-color: black;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.previous,
+.next {
+    fill: var(--secondary-color);
+    font-size: 3em;
+}
+
+.arrow-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exit-button-container {
+    height: 100%;
+}
+
+.exit-button {
+    fill: var(--secondary-color);
+    font-size: 2em;
+    margin-left: 10px;
 }
