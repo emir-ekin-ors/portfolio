@@ -51,10 +51,26 @@ svg {
 .container {
     height: 100%;
     display: grid;
-    grid-template: 1fr / 1fr 2fr;
-    gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: clamp(30px, min-content, 400px);
+    gap: 2%;
     padding: 50px;
-    overflow: auto;
+}
+
+.informations {
+    grid-area: 1 / 1 / span 5 / 2;
+}
+
+.container>.title {
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+
+@media (max-width: 1000px) {
+    .container>.title {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
 }
 
 .image-name-title {
@@ -106,18 +122,12 @@ svg {
     font-weight: bold;
 }
 
-.projects {
-    display: grid;
-    grid-template: 1fr / repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-}
 
-.projects>.card {
+.card {
     box-shadow: 0 10px 5px -5px gray;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .card-bottom {
