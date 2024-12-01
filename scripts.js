@@ -5,6 +5,9 @@ const descriptionContainer = document.querySelector(".project-description")
 const imageContainer = document.querySelector(".image-container");
 const dialog = document.querySelector("#favDialog");
 const fullPage = document.querySelector("#fullpage");
+const previousButton = document.querySelector(".previous");
+const nextButton = document.querySelector(".next");
+const exitButton = document.querySelector(".exit-button");
 
 const fileNames = {
     "cyprusinno": ["App/edit_profile.png", "App/forgot_password.png", "App/login_screen.png", "App/message.png", "App/messages.png", "App/profile.png", "App/users.png", "Website/create_event_screen.png", "Website/create_user_screen.png", "Website/events_screen.png", "Website/homepage.png", "Website/login_screen.png", "Website/notification_screen.png", "Website/users_screen.png"],
@@ -37,6 +40,7 @@ const descriptions = {
     "trok": ["Built a mobile application using Flutter, enabling users to list items for bartering, make offers, and arrange meetings for item exchanges.", "Architected and developed the backend of a bartering application, creating RESTful APIs with Laravel."]
 }
 
+let clickedImage
 projectCards.forEach(card => {
     card.addEventListener("click", (e) => {
         projectName = e.currentTarget.classList[2];
@@ -62,10 +66,12 @@ projectCards.forEach(card => {
             img.alt = imagePath;
             img.style.width = "100%";
             img.style.height = "100%";
-            img.addEventListener("click", function () {
+            img.setAttribute("class", "project-image");
+            img.addEventListener("click", () => {
                 fullPage.style.backgroundImage = "url(" + img.src + ")";
-                fullPage.style.display = "block";
+                fullPage.style.display = "flex";
                 dialog.close();
+                clickedImage = img;
             });
             imageContainer.appendChild(img);
         });
@@ -92,16 +98,50 @@ closeModalButton.addEventListener("click", () => {
     dialog.close();
 })
 
-fullPage.addEventListener("click", () => {
+function goPreviousImage() {
+    let images = clickedImage.parentNode.children;
+    let index = [].indexOf.call(images, clickedImage)
+    if (index > 0) {
+        let previousImage = images[index - 1]
+        clickedImage = previousImage;
+        fullPage.style.backgroundImage = "url(" + previousImage.src + ")";
+    }
+}
+previousButton.addEventListener("click", goPreviousImage);
+
+function goNextImage() {
+    let images = clickedImage.parentNode.children;
+    let index = [].indexOf.call(images, clickedImage)
+    if (index < images.length - 1) {
+        let nextImage = images[index + 1]
+        clickedImage = nextImage;
+        fullPage.style.backgroundImage = "url(" + nextImage.src + ")";
+    }
+}
+nextButton.addEventListener("click", goNextImage);
+
+exitButton.addEventListener("click", () => {
     fullPage.style.display = "none";
     dialog.showModal();
 })
 
 document.addEventListener("keydown", function (event) {
     const key = event.key;
-    if (key === "Escape" && fullPage.style.display != "none") {
-        event.preventDefault();
-        fullPage.style.display = "none";
-        dialog.showModal();
+    if (fullPage.style.display != "none") {
+        switch (key) {
+            case "Escape":
+                event.preventDefault();
+                fullPage.style.display = "none";
+                dialog.showModal();
+                break;
+            case "ArrowRight":
+                goNextImage();
+                break;
+            case "ArrowLeft":
+                goPreviousImage();
+                break;
+            default:
+                break;
+        }
     }
 });
