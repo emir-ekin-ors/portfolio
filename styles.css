@@ -156,6 +156,7 @@ svg {
     max-width: 300px;
     object-fit: contain;
     justify-self: center;
+    cursor: pointer;
 }
 
 .project-description {
