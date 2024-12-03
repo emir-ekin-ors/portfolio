@@ -73,6 +73,18 @@ svg {
     }
 }
 
+@media (max-width: 450px) {
+    .container {
+        padding: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: clamp(30px, min-content, 200px);
+    }
+
+    .techs {
+        flex-direction: column;
+    }
+}
+
 .image-name-title {
     display: flex;
     flex-direction: column;
