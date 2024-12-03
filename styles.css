@@ -258,8 +258,6 @@ li.react-native::marker {
 @media (max-width: 500px) {
     .container {
         padding: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-auto-rows: clamp(30px, min-content, 200px);
     }
 
     .techs {
