@@ -66,25 +66,6 @@ svg {
     grid-column-end: -1;
 }
 
-@media (max-width: 1000px) {
-    .container>.title {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-}
-
-@media (max-width: 450px) {
-    .container {
-        padding: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-auto-rows: clamp(30px, min-content, 200px);
-    }
-
-    .techs {
-        flex-direction: column;
-    }
-}
-
 .image-name-title {
     display: flex;
     flex-direction: column;
@@ -265,4 +246,30 @@ li.react::marker {
 
 li.react-native::marker {
     color: salmon;
+}
+
+@media (max-width: 1000px) {
+    .container>.title {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: clamp(30px, min-content, 200px);
+    }
+
+    .techs {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: clamp(30px, min-content, 200px);
+    }
 }
