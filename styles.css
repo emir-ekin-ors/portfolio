@@ -182,7 +182,7 @@ li {
 
 #fullpage {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 0;
     top: 0;
     left: 0;
