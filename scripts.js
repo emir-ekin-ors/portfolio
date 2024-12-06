@@ -68,6 +68,7 @@ projectCards.forEach(card => {
             img.style.height = "100%";
             img.setAttribute("class", "project-image");
             img.addEventListener("click", () => {
+                document.body.style.overflow = "hidden";
                 fullPage.style.backgroundImage = "url(" + img.src + ")";
                 fullPage.style.display = "flex";
                 dialog.close();
@@ -121,6 +122,7 @@ function goNextImage() {
 nextButton.addEventListener("click", goNextImage);
 
 exitButton.addEventListener("click", () => {
+    document.body.style.overflow = "auto";
     fullPage.style.display = "none";
     dialog.showModal();
 })
@@ -132,6 +134,7 @@ document.addEventListener("keydown", function (event) {
             case "Escape":
                 event.preventDefault();
                 fullPage.style.display = "none";
+
                 dialog.showModal();
                 break;
             case "ArrowRight":
