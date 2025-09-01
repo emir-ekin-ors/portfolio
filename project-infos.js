@@ -116,4 +116,28 @@ const projects = {
     ],
     tags: ["laravel", "bootstrap"],
   },
+  meather: {
+    title: "Meather",
+    subtitle: "Social Weather App",
+    intro:
+      "Developed a mobile application that combines real-time weather information with social networking features, enabling users to share and interact with weather-appropriate outfits.",
+    files: [
+      "meather_1.png",
+      "meather_2.png",
+      "meather_3.png",
+      "meather_4.png",
+      "meather_5.png",
+      "meather_6.png",
+      "meather_7.png",
+      "meather_8.png",
+    ],
+    descriptions: [
+      "Designed and developed the application using Flutter for the frontend, ensuring compatibility across iOS and Android devices.",
+      "Built the backend using Laravel to manage user data, outfit uploads, and social interactions.",
+      "Integrated real-time weather APIs to display accurate weather information for the user's current location or any location selected on a Google Maps interface.",
+      "Implemented social features allowing users to upload outfits, and interact with other users by liking, commenting on posts, and following profiles.",
+      "Utilised Google Maps to provide a dynamic and intuitive user interface for exploring weather and outfits in different cities worldwide.",
+    ],
+    tags: ["laravel", "flutter"],
+  },
 };
