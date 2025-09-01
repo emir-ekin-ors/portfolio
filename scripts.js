@@ -1,3 +1,4 @@
+const projectContainer = document.querySelector(".container");
 const projectCards = document.querySelectorAll(".card.project");
 const modalTitle = document.querySelector(".modal-title");
 const modalSubtitle = document.querySelector(".modal-subtitle");
@@ -8,17 +9,18 @@ const fullPage = document.querySelector("#fullpage");
 const previousButton = document.querySelector(".previous");
 const nextButton = document.querySelector(".next");
 const exitButton = document.querySelector(".exit-button");
-
 let clickedImage;
-projectCards.forEach((card) => {
-  card.addEventListener("click", (e) => {
-    projectName = e.currentTarget.classList[2];
 
-    title = e.currentTarget.childNodes[1].childNodes[1].textContent;
-    modalTitle.textContent = title;
+for (var projectName in projects) {
+  if (!projects.hasOwnProperty(projectName)) {
+    continue;
+  }
 
-    subtitle = e.currentTarget.childNodes[1].childNodes[3].textContent;
-    modalSubtitle.textContent = subtitle;
+  const projectCard = returnProjectCard(projectName);
+  projectCard.addEventListener("click", (e) => {
+    let projectName = e.currentTarget.classList[2];
+    modalTitle.textContent = projects[projectName].title;
+    modalSubtitle.textContent = projects[projectName].subtitle;
 
     descriptionContainer.textContent = "";
     projects[projectName].descriptions.forEach((description) => {
@@ -48,7 +50,9 @@ projectCards.forEach((card) => {
 
     dialog.showModal();
   });
-});
+
+  projectContainer.appendChild(projectCard);
+}
 
 dialog.addEventListener("click", (event) => {
   const rect = dialog.getBoundingClientRect();

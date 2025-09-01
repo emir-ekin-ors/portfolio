@@ -1,5 +1,9 @@
 const projects = {
   cyprusinno: {
+    title: "CyprusInno",
+    subtitle: "Social media for entrepreneurs",
+    intro:
+      "Created a social platform for entrepreneurs, incorporating Laravel, Flutter, and Bootstrap, with features for networking, messaging, and event management, funded by the European Union.",
     files: [
       "App/edit_profile.png",
       "App/forgot_password.png",
@@ -24,15 +28,25 @@ const projects = {
       "Developed an admin panel that enables organisation employees to manage users and company events effectively.",
       "Actively participated in project planning and regular meetings to ensure project objectives were met.",
     ],
+    tags: ["laravel", "flutter", "bootstrap"],
   },
   eragps: {
+    title: "GPS App",
+    subtitle: "GPS Tracker for Shuttles",
+    intro:
+      "Built a Flutter app for real-time shuttle tracking on Google Maps using client-provided API endpoints.",
     files: ["eragps.gif"],
     descriptions: [
       "Developed a mobile application using Flutter to help users locate and track shuttles on Google Maps.",
       "API endpoints provided by the client for real-time shuttle location.",
     ],
+    tags: ["flutter"],
   },
   gatsot: {
+    title: "Gatsot",
+    subtitle: "Smart Shopping Assistant",
+    intro:
+      "Created a smart shopping assistant app with crowdsourced pricing, integrating Laravel, Flutter, and Azure APIs, which earned €30,000 in funding for its innovation.",
     files: [],
     descriptions: [
       "Utilizing crowdsourcing algorithms to compile a comprehensive price database from various markets.",
@@ -42,8 +56,13 @@ const projects = {
       "Secured €30,000 in funding from government to support project development and implementation.",
       "Demo: https://www.youtube.com/watch?v=pqvS-y3KiQg",
     ],
+    tags: ["laravel", "flutter"],
   },
   gurada: {
+    title: "Gurada",
+    subtitle: "Renting Platform",
+    intro:
+      "Developed a rental platform with Laravel and React, featuring search functionality, user reviews, and a responsive interface for seamless sharing experiences.",
     files: [
       "homepage.png",
       "item_page.png",
@@ -59,14 +78,24 @@ const projects = {
       "Integrated advanced search functionalities enabling users to browse items by name, price, date, and location.",
       "Enabled users to leave comments and ratings for rented items, fostering a community-driven platform.",
     ],
+    tags: ["laravel", "bootstrap", "react"],
   },
   gymlog: {
+    title: "GymLog",
+    subtitle: "Gym Weight Journal",
+    intro:
+      "Designed a React Native gym log app, enabling users to track workout routines with an intuitive interface for both iOS and Android.",
     files: ["gymlog.gif", "new_set.png", "programs.png", "workout.png"],
     descriptions: [
       "Developed a mobile application using React Native, enabling users to track gym weights for each workout routine through a clean and intuitive interface, compatible with both iOS and Android devices.",
     ],
+    tags: ["react-native"],
   },
   mesmer: {
+    title: "Dental Clinic Portal",
+    subtitle: "Application portal / Admin panel",
+    intro:
+      "Built a web application for dental clinics to manage item requests, featuring dynamic user roles, an admin panel, and streamlined workflows.",
     files: [
       "email_code.png",
       "forgot_password.png",
@@ -85,12 +114,6 @@ const projects = {
       "Designed dynamic user experiences, adapting the website based on user roles, with an admin panel for manage dentist accounts, oversee applications, and control pricing.",
       "Actively participated in planning and meetings to ensure alignment with project goals and timelines.",
     ],
-  },
-  trok: {
-    files: [],
-    descriptions: [
-      "Built a mobile application using Flutter, enabling users to list items for bartering, make offers, and arrange meetings for item exchanges.",
-      "Architected and developed the backend of a bartering application, creating RESTful APIs with Laravel.",
-    ],
+    tags: ["laravel", "bootstrap"],
   },
 };

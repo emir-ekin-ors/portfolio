@@ -1,273 +1,272 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titan+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titan+One&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lacquer&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&family=Teko:wght@300..700&family=Titan+One&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lacquer&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&family=Teko:wght@300..700&family=Titan+One&family=VT323&display=swap");
 
 :root {
-    --bg-color: #e9e5d9;
-    --secondary-color: #F96E2A;
-    --card-color: #FBF8EF;
+  --bg-color: #e9e5d9;
+  --secondary-color: #f96e2a;
+  --card-color: #fbf8ef;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    background-color: var(--bg-color);
-    font-family: "Sour Gummy", "Roboto", serif;
-    font-size: 1.1em;
+  height: 100vh;
+  background-color: var(--bg-color);
+  font-family: "Sour Gummy", "Roboto", serif;
+  font-size: 1.1em;
 }
 
 img {
-    border: 2px solid black;
-    border-radius: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .profile-photo {
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
-    margin-bottom: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  margin-bottom: 10px;
 }
 
 .contact {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
 }
 
 svg {
-    display: block;
-    height: 1.6em;
-    cursor: pointer;
+  display: block;
+  height: 1.6em;
+  cursor: pointer;
 }
 
 .container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-auto-rows: clamp(30px, min-content, 400px);
-    gap: 2%;
-    padding: 50px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: clamp(30px, min-content, 400px);
+  gap: 2%;
+  padding: 50px;
 }
 
 .informations {
-    grid-area: 1 / 1 / span 5 / 2;
+  grid-area: 1 / 1 / span 5 / 2;
 }
 
-.container>.title {
-    grid-column-start: 2;
-    grid-column-end: -1;
+.container > .title {
+  grid-column-start: 2;
+  grid-column-end: -1;
 }
 
 .image-name-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name {
-    font-size: 1.5em;
-    font-weight: bold;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .job-title {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: var(--secondary-color);
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
 .card {
-    background-color: var(--card-color);
-    margin: 10px 0px;
-    border-radius: 10px;
-    padding: 30px;
+  background-color: var(--card-color);
+  margin: 10px 0px;
+  border-radius: 10px;
+  padding: 30px;
 }
 
 .title {
-    font-size: 1.5em;
-    font-weight: bold;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .informations .title {
-    margin-top: 30px;
-    margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: var(--secondary-color);
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
 .description {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-.projects-container>.title {
-    font-size: 1.7em;
-    font-weight: bold;
+.projects-container > .title {
+  font-size: 1.7em;
+  font-weight: bold;
 }
-
 
 .card {
-    box-shadow: 0 10px 5px -5px gray;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
+  box-shadow: 0 10px 5px -5px gray;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-bottom {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .techs {
-    display: flex;
+  display: flex;
 }
 
 .icon {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 :modal {
-    background-color: var(--card-color);
-    border: 0px;
-    border-radius: 10px;
-    margin: auto;
-    height: 90vh;
-    width: 90vw;
-    padding: 20px;
+  background-color: var(--card-color);
+  border: 0px;
+  border-radius: 10px;
+  margin: auto;
+  height: 90vh;
+  width: 90vw;
+  padding: 20px;
 }
 
 .modal-header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal-titles {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .image-container {
-    display: grid;
-    grid-template: 1fr / repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-    margin-top: 30px;
+  display: grid;
+  grid-template: 1fr / repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin-top: 30px;
 }
 
 .image-container img {
-    max-width: 300px;
-    object-fit: contain;
-    justify-self: center;
-    cursor: pointer;
+  max-width: 300px;
+  object-fit: contain;
+  justify-self: center;
+  cursor: pointer;
 }
 
 .project-description {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 li {
-    list-style-position: inside;
+  list-style-position: inside;
 }
 
 #fullpage {
-    display: none;
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat no-repeat;
-    background-position: center center;
-    background-color: black;
-    padding: 20px;
-    flex-direction: column;
-    justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .previous,
 .next {
-    fill: var(--secondary-color);
-    font-size: 3em;
+  fill: var(--secondary-color);
+  font-size: 3em;
 }
 
 .arrow-buttons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .exit-button-container {
-    height: 100%;
+  height: 100%;
 }
 
 .exit-button {
-    fill: var(--secondary-color);
-    font-size: 2em;
-    margin-left: 10px;
+  fill: var(--secondary-color);
+  font-size: 2em;
+  margin-left: 10px;
 }
 
 li span {
-    position: relative;
-    left: -20px;
-    top: -3px;
+  position: relative;
+  left: -20px;
+  top: -3px;
 }
 
 li::marker {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 li.laravel::marker {
-    color: red;
+  color: red;
 }
 
 li.flutter::marker {
-    color: blue;
+  color: blue;
 }
 
 li.bootstrap::marker {
-    color: purple;
+  color: purple;
 }
 
 li.react::marker {
-    color: skyblue;
+  color: skyblue;
 }
 
 li.react-native::marker {
-    color: salmon;
+  color: salmon;
 }
 
 @media (max-width: 1000px) {
-    .container>.title {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
+  .container > .title {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 
 @media (max-width: 500px) {
-    .container {
-        padding: 10px;
-    }
+  .container {
+    padding: 10px;
+  }
 
-    .techs {
-        flex-direction: column;
-    }
+  .techs {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 400px) {
-    .container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-auto-rows: clamp(30px, min-content, 200px);
-    }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: clamp(30px, min-content, 200px);
+  }
 }
