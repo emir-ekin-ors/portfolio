@@ -54,7 +54,7 @@ const projects = {
       "Integrated Azure API Services for text extraction from scanned images.",
       "Participated in the Startups4Peace startup competition, where our project garnered significant attention and appreciation, showcasing its potential impact and innovation in the market.",
       "Secured €30,000 in funding from government to support project development and implementation.",
-      "Demo: https://www.youtube.com/watch?v=pqvS-y3KiQg",
+      "To learn more, visit our website at https://gatsot.app",
     ],
     tags: ["laravel", "flutter"],
   },
